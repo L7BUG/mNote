@@ -8,6 +8,9 @@
     "sub_directories": [
         {
             "name": "java"
+        },
+        {
+            "name": "Mybatis"
         }
     ],
     "tags": [

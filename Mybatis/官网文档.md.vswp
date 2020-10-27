@@ -1,0 +1,56 @@
+vnote_backup_file_826537664 /home/l/文档/mNote/Mybatis/官网文档.md
+# [MyBatis](https://mybatis.org/mybatis-3/zh/index.html)
+---
+# XML 映射文件
+* ## resultMap(结果映射)
+* 
+
+# 日志
+* ## logImpl(config.xml settings配置)
+    * SLF4J
+    * **`LOG4J`**
+        * 配置文件
+           ```
+            #将等级为DEBUG的日志信息输出到console和file这两个目的地，console和file的定义在下面的代码
+            log4j.rootLogger=DEBUG,console,file
+            
+            #控制台输出的相关设置
+            log4j.appender.console = org.apache.log4j.ConsoleAppender
+            log4j.appender.console.Target = System.out
+            log4j.appender.console.Threshold=DEBUG
+            log4j.appender.console.layout = org.apache.log4j.PatternLayout
+            log4j.appender.console.layout.ConversionPattern=[%c]-%m%n
+
+            #文件输出的相关设置
+            log4j.appender.file = org.apache.log4j.RollingFileAppender
+            log4j.appender.file.File=./log/LLY.log
+            log4j.appender.file.MaxFileSize=10mb
+            log4j.appender.file.Threshold=DEBUG
+            log4j.appender.file.layout=org.apache.log4j.PatternLayout
+            log4j.appender.file.layout.ConversionPattern=[%p][%d{yy-MM-dd}][%c]%m%n
+
+            #日志输出级别
+            log4j.logger.org.mybatis=DEBUG
+            log4j.logger.java.sql=DEBUG
+            log4j.logger.java.sql.Statement=DEBUG
+            log4j.logger.java.sql.ResultSet=DEBUG
+            log4j.logger.java.sql.PreparedStatement=DEBUG
+            
+           ```
+        * 简单使用
+            ```
+            // 日志对象
+            static Logger logger = Logger.getLogger(当前类.class);    
+            //日志级别
+            logger.info("info:---->testLog4j()");
+            logger.debug("debug:---->testLog4j()");
+            logger.error("error:---->testLog4j()");
+            ```
+        * 
+       
+    * LOG4J2
+    * JDK_LOGGING
+    * COMMONS_LOGGING 
+    * **`STDOUT_LOGGING`** (mybatis标准日志实现 )
+    * NO_LOGGING
+
