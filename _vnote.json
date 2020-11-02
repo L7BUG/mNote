@@ -14,6 +14,9 @@
         },
         {
             "name": "ssm"
+        },
+        {
+            "name": "git"
         }
     ],
     "tags": [
