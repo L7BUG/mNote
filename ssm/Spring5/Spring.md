@@ -62,3 +62,26 @@
                 >>最终通知 `@After`
 
                 >环绕结束
+4. # [MyBatis-Spring](http://mybatis.org/spring/zh/index.html)
+    1. > `DriverManagerDataSource`
+        > > `SqlSessionFactoryBean`
+        > >> `SqlSessionTemplate`
+        > >>> `MyMapper`
+5. # 事务
+    > ACID 原则
+    * 原子性
+    * 一致性
+    * 隔离性
+        * 多个业务操作同一个资源， 防止数据损坏
+    * 持久性
+        * 事务一旦提交， 无论系统发生什么问题， 结果都不会再被影响， 被持久化的写到存储器中
+
+    * # 声明式事务
+        > 和AOP 差不多 需要配置一个 事务管理器 `DataSourceTransactionManager`
+        1. >`<tx:advice>` //配置事务通知
+        2. >> `<tx:attributes>` //配置事务传播特性
+        3. >>> `<tx:method name>`...
+        
+        然后配置AOP
+        >`<aop:config>`
+        >> 切入点 和 aop:advisor 引用上方的事务通知
