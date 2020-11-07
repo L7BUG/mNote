@@ -8,6 +8,9 @@
         },
         {
             "name": "Spring5"
+        },
+        {
+            "name": "Spring MVC"
         }
     ],
     "version": "1"
