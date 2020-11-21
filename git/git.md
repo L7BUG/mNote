@@ -10,3 +10,4 @@
 * # `stash` 储藏
 - # 查看远程库信息，使用`git remote -v`
 -  # `git push origin --delete new_a` 删除远程分支
+---
