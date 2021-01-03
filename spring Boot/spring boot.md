@@ -33,11 +33,12 @@ pom.xml
 
 - **主程序**
     ![自动装配及原理](_v_attachments/20201113173423482_1811248475/自动装配及原理.svg)
+    
     - 结论
     springboot所有自动装配都是在启动的时候扫描并加载 `spring.factories`所有的配置类都在这里面， 但是不一定生效， 要判断条件是否成立， 只要导入了对应的start, 就有对应的其启动器了， 有了启动器， 我们自动装配就会生效， 然后就配置成功 详细见 [自动装配及原理.km](_v_attachments/20201113173423482_1811248475/自动装配及原理.km)
     1. spring-boot-autoconfigure.jar 所有的自动配置都在这个包下
-    2.  容器中会存在非常多的xxxautoconfig
-
+2.  容器中会存在非常多的xxxautoconfig
+    
 - # spring boot 配置 `application`
     -  yml 类是json(推荐)
     - 通过`@ConfigurationProperties(prefix = "xxx")` 可以直接赋值给一个对象
@@ -56,6 +57,7 @@ pom.xml
         4. classpath:/
         ---
         - `spring.profiles.active=xxx` (properties 多环境配置) 
+            
             1. application-xxx
         - yaml 多环境配置
             ```
@@ -103,15 +105,15 @@ pom.xml
         ## 原理
             1. spring boot 启动会加载大量的自动配置类
             2. 看我们需要的功能有没有在 spring boot 默认写好的自动装配类当中 spring-boot-autoconfigure-2.4.0.jar!/META-INF/spring.factories 这个文件下
-            3. 在看这个自动配置类配了些啥，会从一个叫properties类中获取一些属性 可以自行更改一些默认选项
-
+        3. 在看这个自动配置类配了些啥，会从一个叫properties类中获取一些属性 可以自行更改一些默认选项
+        
             ---
             
                 ```
                 xxxAutoConfigurartion : 自动装配类
                 xxxProperties : 装配文件中的相关属性
-                ```
-
+            ```
+        
             ---
             设置 `debug = true` 可以打印配置报告
 ---
@@ -226,6 +228,7 @@ pom.xml
             ```
         2. 加入 xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4" 约束
         3. `sec:authorize` 判断显示还是不显示
+            
             1. `isAuthenticated()`判断是否登陆
             2. `principal` 可以查看当前登陆的角色
 ---
