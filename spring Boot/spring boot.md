@@ -57,7 +57,7 @@ pom.xml
         4. classpath:/
         ---
         - `spring.profiles.active=xxx` (properties 多环境配置) 
-            
+          
             1. application-xxx
         - yaml 多环境配置
             ```
@@ -116,6 +116,7 @@ pom.xml
         
             ---
             设置 `debug = true` 可以打印配置报告
+            ```
 ---
 - # spring boot web 
     静态资源
@@ -203,7 +204,7 @@ pom.xml
             
         ```
     3. 认证
-        ```
+        ```java
         //    认证
             @Override
             protected void configure(AuthenticationManagerBuilder auth) throws Exception {
@@ -228,7 +229,7 @@ pom.xml
             ```
         2. 加入 xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4" 约束
         3. `sec:authorize` 判断显示还是不显示
-            
+           
             1. `isAuthenticated()`判断是否登陆
             2. `principal` 可以查看当前登陆的角色
 ---
@@ -243,3 +244,5 @@ pom.xml
 
 - ## [任务](./task.md)
 - ## [Dubbo](./Dubbo.md)
+
+- ## [JPA](./SpringJPA.md)

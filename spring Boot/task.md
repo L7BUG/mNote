@@ -6,14 +6,14 @@
 ---
 # 邮件任务
 1. 导入依赖
-    ```
+    ```xml
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-mail</artifactId>
         </dependency>
     ```
 2. 配置配置文件
-    ```
+    ```yml
     spring:
       mail:
         username: lul789@qq.com
@@ -27,7 +27,7 @@
                 enable: true
     ```
 3. JavaMailSenderImpl.send()方法
-    ```
+    ```java
     //        复杂邮件
             MimeMessage mimeMessage = mailSender.createMimeMessage();
             MimeMessageHelper helper = new MimeMessageHelper(mimeMessage, true, "utf-8");
